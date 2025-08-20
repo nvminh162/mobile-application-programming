@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6", /* Chỉ định phiên bản JavaScript mà TypeScript sẽ biên dịch ra */
+    "module": "commonjs", /* Sử dụng module CommonJS */
+    "strict": true, /* Bật kiểm tra strict */
+    "esModuleInterop": true, /* Hỗ trợ import/export ES Modules */
+    "outDir": "./dist", /* Thư mục chứa các tệp JavaScript đã biên dịch */
+    "rootDir": "./src", /* Thư mục gốc chứa tệp TypeScript */
+    "skipLibCheck": true /* Bỏ qua kiểm tra các tệp khai báo thư viện */
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
