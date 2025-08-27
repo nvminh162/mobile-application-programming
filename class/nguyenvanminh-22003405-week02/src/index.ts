@@ -1,4 +1,4 @@
-import createAsyncMessage from './bai01'
+import createAsyncMessage from './bai01a'
 /*
  * Nguyễn Văn Minh - 22003405 - Week02
  */
