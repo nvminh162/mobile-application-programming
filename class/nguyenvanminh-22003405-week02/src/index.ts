@@ -2,7 +2,7 @@ import createAsyncMessage from './bai01a'
 import createAsyncNumber from './bai02a'
 import createAsyncError from './bai03a'
 import getRandomNumber from './bai04a'
-import simulateTask from './bai05a'
+import simulateTask from './bai05_6a'
 /*
  * Nguyễn Văn Minh - 22003405 - Week02
  */
@@ -41,6 +41,14 @@ console.log("A. Basics with Promise");
   await simulateTask(1500)
   .then((result) => {
     console.log(result);
+  })
+  console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+  console.log("6a. Use Promise.all() to run 3 simulated Promises in parallel and print the result.");
+  const tasks = [simulateTask(1000), simulateTask(2000), simulateTask(1500)];
+  await Promise.all(tasks)
+  .then((results) => {
+    console.log("All tasks completed:", results);
   })
   console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 })();
