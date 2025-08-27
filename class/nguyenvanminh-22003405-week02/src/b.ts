@@ -4,6 +4,10 @@ import handleErrorWithTryCatch from './bai13b'
 import multiplyAfterDelay from './bai14b'
 import callSequentially from './bai15b'
 import callInParallel from './bai16b'
+import iteratePromises from './bai17b'
+import fetchUser from './bai18b'
+import fetchUsers from './bai19b'
+import demoFetchWithTimeout from './bai20b'
 
 const b = async () => {
     console.log("B. Async/Await Exercises");
@@ -32,6 +36,25 @@ const b = async () => {
     
     console.log("16b. Call multiple async functions in parallel using Promise.all().");
     await callInParallel();
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    
+    console.log("17b. Use for await...of to iterate over an array of Promises.");
+    await iteratePromises();
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    
+    console.log("18b. Write an async function fetchUser(id) that simulates an API call.");
+    const user = await fetchUser(42);
+    console.log("Fetched user:", user);
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    
+    console.log("19b. Create an async function fetchUsers(ids: number[]) that calls fetchUser for each ID.");
+    const userIds = [1, 2, 3];
+    const users = await fetchUsers(userIds);
+    console.log("Fetched users:", users);
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    
+    console.log("20b. Add a timeout: if the API call takes more than 2 seconds, throw an error.");
+    await demoFetchWithTimeout();
     console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 }
 
