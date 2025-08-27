@@ -3,6 +3,7 @@ import createAsyncNumber from './bai02a'
 import createAsyncError from './bai03a'
 import getRandomNumber from './bai04a'
 import simulateTask from './bai05_6a'
+import createRacingPromises from './bai07a'
 /*
  * Nguyễn Văn Minh - 22003405 - Week02
  */
@@ -50,5 +51,15 @@ console.log("A. Basics with Promise");
   .then((results) => {
     console.log("All tasks completed:", results);
   })
+  console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+  console.log("7a. Use Promise.race() to return whichever Promise resolves first.");
+  await createRacingPromises()
+  .then((result) => {
+    console.log("First to resolve:", result);
+  })
+  .catch((error) => {
+    console.error("Error in race:", error);
+  });
   console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 })();
