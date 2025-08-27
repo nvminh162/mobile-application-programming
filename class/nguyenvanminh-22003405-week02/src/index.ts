@@ -35,4 +35,8 @@ console.log("A. Basics with Promise");
     console.error("Error:", error.message);
   });
   console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+  console.log("5a. Create a function simulateTask(time) that returns a Promise resolving with 'Task done' after time ms.");
+
+  console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 })();
