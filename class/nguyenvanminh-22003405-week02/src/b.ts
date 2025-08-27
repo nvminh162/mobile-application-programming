@@ -3,6 +3,7 @@ import runTaskWithAwait from './bai12b'
 import handleErrorWithTryCatch from './bai13b'
 import multiplyAfterDelay from './bai14b'
 import callSequentially from './bai15b'
+import callInParallel from './bai16b'
 
 const b = async () => {
     console.log("B. Async/Await Exercises");
@@ -27,6 +28,10 @@ const b = async () => {
     
     console.log("15b. Call multiple async functions sequentially using await.");
     await callSequentially();
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    
+    console.log("16b. Call multiple async functions in parallel using Promise.all().");
+    await callInParallel();
     console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 }
 
