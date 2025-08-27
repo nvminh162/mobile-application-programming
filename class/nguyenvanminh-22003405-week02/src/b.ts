@@ -2,6 +2,7 @@ import createAsyncMessageWithAwait from './bai11b'
 import runTaskWithAwait from './bai12b'
 import handleErrorWithTryCatch from './bai13b'
 import multiplyAfterDelay from './bai14b'
+import callSequentially from './bai15b'
 
 const b = async () => {
     console.log("B. Async/Await Exercises");
@@ -22,6 +23,10 @@ const b = async () => {
     const inputNumber = 5;
     const result = await multiplyAfterDelay(inputNumber);
     console.log(`${inputNumber} × 3 = ${result}`);
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    
+    console.log("15b. Call multiple async functions sequentially using await.");
+    await callSequentially();
     console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 }
 
