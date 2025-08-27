@@ -2,6 +2,7 @@ import createAsyncMessage from './bai01a'
 import createAsyncNumber from './bai02a'
 import createAsyncError from './bai03a'
 import getRandomNumber from './bai04a'
+import simulateTask from './bai05a'
 /*
  * Nguyễn Văn Minh - 22003405 - Week02
  */
@@ -37,6 +38,9 @@ console.log("A. Basics with Promise");
   console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
   console.log("5a. Create a function simulateTask(time) that returns a Promise resolving with 'Task done' after time ms.");
-
+  await simulateTask(1500)
+  .then((result) => {
+    console.log(result);
+  })
   console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 })();
