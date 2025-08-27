@@ -1,6 +1,7 @@
 import createAsyncMessageWithAwait from './bai11b'
 import runTaskWithAwait from './bai12b'
 import handleErrorWithTryCatch from './bai13b'
+import multiplyAfterDelay from './bai14b'
 
 const b = async () => {
     console.log("B. Async/Await Exercises");
@@ -15,6 +16,12 @@ const b = async () => {
 
     console.log("13b. Handle errors using try/catch with async/await.");
     await handleErrorWithTryCatch();
+    console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    
+    console.log("14b. Write an async function that takes a number, waits 1 second, and returns the number × 3.");
+    const inputNumber = 5;
+    const result = await multiplyAfterDelay(inputNumber);
+    console.log(`${inputNumber} × 3 = ${result}`);
     console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 }
 
