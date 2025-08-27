@@ -6,10 +6,4 @@ const createAsyncMessage = (): Promise<string> => {
   });
 };
 
-const runExample = async () => {
-  console.log("Starting...");
-  const message = await createAsyncMessage();
-  console.log(message);
-};
-
 export default createAsyncMessage;
