@@ -81,4 +81,17 @@ console.log("A. Basics with Promise");
   console.log("Original array:", sampleArray);
   console.log("Even numbers:", evenNumbers);
   console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+  console.log("10a. Use .finally() to log `Done` when a Promise finishes (success or failure).");
+  await getRandomNumber()
+  .then((number) => {
+    console.log("Random number:", number);
+  })
+  .catch((error) => {
+    console.error("Error:", error.message);
+  })
+  .finally(() => {
+    console.log("Done");
+  });
+  console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 })();
