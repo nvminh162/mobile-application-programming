@@ -5,6 +5,7 @@ import getRandomNumber from './bai04a'
 import simulateTask from './bai05_6a'
 import createRacingPromises from './bai07a'
 import createPromiseChain from './bai08a'
+import readAndFilterEvenNumbers from './bai09a'
 /*
  * Nguyễn Văn Minh - 22003405 - Week02
  */
@@ -72,6 +73,12 @@ console.log("A. Basics with Promise");
   .catch((error) => {
     console.error("Error in promise chain:", error);
   });
+  console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
+  console.log("9a. Write a Promise that reads an array after 1 second and filters even numbers.");
+  const sampleArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const evenNumbers = await readAndFilterEvenNumbers(sampleArray);
+  console.log("Original array:", sampleArray);
+  console.log("Even numbers:", evenNumbers);
   console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 })();
