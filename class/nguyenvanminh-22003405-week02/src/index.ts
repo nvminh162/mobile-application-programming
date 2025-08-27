@@ -1,5 +1,6 @@
 import createAsyncMessage from './bai01a'
 import createAsyncNumber from './bai02a'
+import createAsyncError from './bai03a'
 /*
  * Nguyễn Văn Minh - 22003405 - Week02
  */
@@ -13,4 +14,11 @@ console.log("A. Basics with Promise");
   const number = await createAsyncNumber();
   console.log(number);
   console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+  console.log("3a. Write a function that returns a Promise rejecting with an error after 1 second.");
+  try {
+    const error = await createAsyncError();
+    console.log(error);
+  } catch (err) {
+    console.log(err);
+  }
 })();
