@@ -1,125 +1,79 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Header from './components/header';
 import Footer from './components/footer';
+import Item from './components/Item';
 
 const DATA = [
   {
     id: '1',
-    title: 'First Item',
-    shopName: 'LTD Food',
+    title: 'Ca nấu lẩu',
+    shopName: 'Shop Devang',
     image: require('./assets/ca_nau_lau.png'),
   },
   {
     id: '2',
-    title: 'Second Item',
-    shopName: 'LTD Food',
-    image: require('./assets/do_choi_dang_mo_hinh.png'),
-  },
-  {
-    id: '3',
-    title: 'Third Item',
+    title: '1 Kg khô gà',
     shopName: 'LTD Food',
     image: require('./assets/ga_bo_toi.png'),
   },
   {
-    id: '4',
-    title: 'Fouth Item',
-    shopName: 'LTD Food',
+    id: '3',
+    title: 'Đồ chơi dạng mô hình',
+    shopName: 'Thế giới đồ chơi',
     image: require('./assets/xa_can_cau.png'),
   },
   {
+    id: '4',
+    title: 'Lãnh đạo đơn giản',
+    shopName: 'Thế giới đồ chơi',
+    image: require('./assets/do_choi_dang_mo_hinh.png'),
+  },
+  {
     id: '5',
-    title: 'Fouth Item',
-    shopName: 'LTD Food',
-    image: require('./assets/ca_nau_lau.png'),
+    title: 'Hiếu lòng con trẻ',
+    shopName: 'Minh Long Book',
+    image: require('./assets/lanh_dao_gian_don.png'),
   },
   {
     id: '6',
     title: 'Fouth Item',
-    shopName: 'LTD Food',
-    image: require('./assets/ca_nau_lau.png'),
+    shopName: 'Minh Long Book',
+    image: require('./assets/hieu_long_con_tre.png'),
   },
   {
     id: '7',
-    title: 'Fouth Item',
-    shopName: 'LTD Food',
-    image: require('./assets/ca_nau_lau.png'),
+    title: 'Donald Trump',
+    shopName: 'Hẹ Hẹ',
+    image: require('./assets/trump_1.png'),
   },
 ];
-
-const Item = ({ image, title, shopName }) => (
-  <View
-    style={{
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      margin: 10,
-    }}>
-    <View
-      style={{
-        flexDirection: 'row',
-      }}>
-      <Image
-        style={{
-          width: 70,
-          height: 70,
-        }}
-        source={image}
-      />
-      <View style={{ padding: 10 }}>
-        <Text>{title}</Text>
-        <Text style={{ color: 'red' }}>{shopName}</Text>
-      </View>
-    </View>
-    <TouchableOpacity
-      style={{
-        backgroundColor: '#ff6b6b',
-        paddingVertical: 10,
-        paddingHorizontal: 20,
-        borderRadius: 5,
-      }}>
-      <Text
-        style={{
-          color: '#fff',
-          fontWeight: 'bold',
-          fontSize: 14,
-        }}>
-        Chat
-      </Text>
-    </TouchableOpacity>
-  </View>
-);
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={{ flex: 1 }}>
         <Header />
+        <View
+          style={{
+            backgroundColor: '#DDDDDD',
+            paddingVertical: 25,
+          }}>
+          <Text
+            style={{
+              textAlign: 'center',
+            }}>
+            Bạn thắc mắc với sản phẩm vừa xem. Đừng ngại chát với Shop!
+          </Text>
+        </View>
         <FlatList
           style={{ flex: 1 }}
           data={DATA}
-          renderItem={({ item }) => (
-            <Item
-              title={item.title}
-              image={item.image}
-              shopName={item.shopName}
-            />
-          )}
+          renderItem={Item}
+          keyExtractor={(item) => item.id}
         />
         <Footer />
       </SafeAreaView>
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-});

@@ -1,21 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import Entypo from '@expo/vector-icons/Entypo';
 
-export default function Footer() {
+export default function Header() {
   return (
-    <View style={styles.container}>
+    <View
+      style={{
+        paddingVertical: 20,
+        backgroundColor: '#00ffff',
+        paddingHorizontal: 15,
+        flexDirection: 'row',
+        justifyContent: "space-between",
+        gap: 15,
+      }}>
       <Entypo name="menu" size={24} color="black" />
       <Entypo name="home" size={24} color="black" />
-      <Entypo name="attachment" size={24} color="black" />
+      <Entypo name="back" size={24} color="black" />
     </View>
-  )
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 15,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    backgroundColor: "#7FFFD4"
-  }
-})

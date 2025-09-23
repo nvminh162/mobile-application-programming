@@ -12,9 +12,9 @@
     "expo-status-bar": "~2.2.3",
     "react": "19.0.0",
     "react-native": "0.79.6",
-    "expo-font": "~13.3.2",
-    "@expo/vector-icons": "^14.1.0",
     "react-native-paper": "4.9.2",
+    "@expo/vector-icons": "^14.1.0",
+    "expo-font": "~13.3.2",
     "react-native-safe-area-context": "5.4.0"
   },
   "devDependencies": {
