@@ -1,0 +1,1 @@
+https://github.com/expo/examples/blob/master/with-sqlite/App.tsx
