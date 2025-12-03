@@ -1,7 +1,12 @@
 Docs: https://drive.google.com/drive/folders/120USFNFJAefQ1_h9UrPe1nyHqlgQXkUe
 
+```
+Lập trình cho thiết bị di động
+DHKTPM18A - 420300143201
 
-Github: https://docs.google.com/spreadsheets/d/194l-6DHAcWmwAeVPQfovnuJGJ8M-SHQhG6rWyKKTeiE/edit?usp=sharing
+Tiết: 10 - 12
 
+Phòng: A1.01B (A (CS1))
 
-Teamwork: https://docs.google.com/spreadsheets/d/1O5kSgWVVK2DV9wBPIpanuLhKjLU6sBrkZMu_-XtqHo8/edit?usp=sharing
+GV: Nguyễn Trọng Tiến
+```
