@@ -2,12 +2,14 @@ import GroceryItem from "@/components/GroceryItem";
 import { setAll, useAppDispatch, useAppSelector } from "@/features/store";
 import { useFetch } from "@/hooks/useFetch";
 import { router, useFocusEffect } from "expo-router";
-import { useCallback } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { FlatList, Text, View } from "react-native";
-import { ActivityIndicator, Button, Icon } from "react-native-paper";
+import { ActivityIndicator, Button, Icon, TextInput } from "react-native-paper";
 
 export default function HomeScreen() {
   const { isLoading, GET } = useFetch();
+
+  const [search, setSearch] = useState("");
 
   const { items } = useAppSelector((state) => state.grocery);
   const useDispatch = useAppDispatch();
@@ -22,6 +24,10 @@ export default function HomeScreen() {
     }, [])
   );
 
+  const filteredItems = useMemo(() => {
+    return items.filter(i => i.name.toLowerCase().includes(search.toLowerCase()));
+  }, [search, items])
+
   if (isLoading) {
     return (
       <View className="flex-1 justify-center items-center">
@@ -32,9 +38,15 @@ export default function HomeScreen() {
 
   return (
     <View className="flex-1 m-10">
+      <TextInput
+        label={"Tìm kiếm tên Grocery"}
+        value={search}
+        onChangeText={(v) => setSearch(v)}
+      />
+
       <Text className="text-center font-bold text-2xl">Grocery List</Text>
       <FlatList
-        data={items}
+        data={filteredItems}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <GroceryItem data={item} />}
         ListEmptyComponent={
